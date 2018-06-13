@@ -1,52 +1,120 @@
 import React, { PropTypes } from 'react';
 import { Button, Icon } from 'antd';
+import BannerAnim, { Element } from 'rc-banner-anim';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
+import SvgMorphPlugin from 'rc-tween-one/lib/plugin/SvgMorphPlugin';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
+TweenOne.plugins.push(SvgMorphPlugin);
+
 
 class Content extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      paused: false,
+      animation: {}
+    }
+  }
+
   render() {
     const props = { ...this.props };
+    const { paused, animation } = this.state;
+    const isMobile = props.isMobile;
     delete props.isMobile;
+
+    const animations = {
+      d: 'M60,10L60,90L140,90L140,10Z',
+      yoyo: true,
+      duration: 1000,
+    };
+    const { Element } = BannerAnim;
+    const BgElement = Element.BgElement;
+
+    const mouseOver = () => {
+      this.setState({animation: {width: '200px'}})
+    }
+    const mouseOut = () => {
+      this.setState({animation: {width: '280px'}})
+    }
+
+    // 手机端
+    const phoneEnd = ()=>(
+      <div className={`${props.className}-wrapper content-template`} key="banner">
+        <QueueAnim
+          type={['bottom', 'top']}
+          delay={200}
+          key="text"
+          className="leftTextContent"
+          id={`${props.id}-wrapper`}
+        >
+          <Button type="ghost" key="button" id={`${props.id}-button`}>
+            前往交易
+          </Button>
+        </QueueAnim>
+      </div>
+    );
+    // PC端
+    const pcEnd = ()=>(
+      <div className={`${props.className}-wrapper content-template`} key="banner">
+
+        <BannerAnim type="across">
+          <Element key="aaa"
+             prefixCls="banner-user-elem"
+             followParallax={{
+               delay: 1000,
+               data: [
+                 { id: 'title', value: -20, type: 'x' },
+                 { id: 'queue', value: 50, type: 'x' },
+                 { id: 'JText', value: 0, type: 'x' },
+               ],
+             }}
+          >
+            <QueueAnim id="queue" key="queue">
+              <div className="leftTextContent">
+                <span
+                  className="title"
+                  key="title"
+                  id={`${props.id}-title`}
+                >
+            倾力打造全球化的区块链资产交易平台
+          </span>
+                <p
+                  key="content"
+                  id={`${props.id}-content`}
+                >
+                  提供全流程、易操作、高信任保障的区块链数字资产交易和托管服务
+                </p>
+              </div>
+            </QueueAnim>
+            <TweenOne id="JText" className="leftTextContent">
+              <Button type="ghost" key="button" id={`${props.id}-button`}>
+                前往交易
+              </Button>
+            </TweenOne>
+          </Element>
+        </BannerAnim>
+
+
+        <div onMouseOver={mouseOver} onMouseOut={mouseOut}>
+          <TweenOne
+            animation={animation}
+            key="footer-img"
+            className="rightTextContent"
+            component="div">
+          </TweenOne>
+        </div>
+      </div>
+    )
+
     return (
       <OverPack
         replay
         playScale={0.8}
         {...props}
       >
-        <div className={`${props.className}-wrapper content-template`} key="banner">
-          <QueueAnim
-            type={['bottom', 'top']}
-            delay={200}
-            key="text"
-            className="leftTextContent"
-            id={`${props.id}-wrapper`}
-          >
-          <span
-            className="title"
-            key="title"
-            id={`${props.id}-title`}
-          >
-            倾力打造全球化的区块链资产交易平台
-          </span>
-            <p
-              key="content"
-              id={`${props.id}-content`}
-            >
-              提供全流程、易操作、高信任保障的区块链数字资产交易和托管服务
-            </p>
-            <Button type="ghost" key="button" id={`${props.id}-button`}>
-              前往交易
-            </Button>
-          </QueueAnim>
-          <TweenOne
-             animation={{ y: '+=30', opacity: 0, type: 'from' }}
-             key="footer-img"
-             className="rightTextContent"
-             component="div">
-
-          </TweenOne>
-        </div>
+        {isMobile ? phoneEnd() : pcEnd() }
       </OverPack>
     );
   }
@@ -54,6 +122,7 @@ class Content extends React.Component {
 
 Content.propTypes = {
   className: PropTypes.string,
+  children: PropTypes.any,
 };
 
 Content.defaultProps = {

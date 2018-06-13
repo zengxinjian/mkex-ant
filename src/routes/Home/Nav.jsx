@@ -75,14 +75,15 @@ class Header extends React.Component {
             {navChildren}
           </Menu>
         </TweenOne>)}
-        <TweenOne className="userLogin">
+        {isMobile ? <span/> : <TweenOne className="userLogin">
           <Button type="ghost" key="login" id={`${props.id}-login`}>
             登录
           </Button>
           <Button type="ghost" key="register" id={`${props.id}-register`}>
             注册
           </Button>
-        </TweenOne>
+        </TweenOne>}
+
       </div>
     </TweenOne>);
   }

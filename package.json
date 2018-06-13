@@ -3,8 +3,7 @@
   "scripts": {
     "start": "roadhog server",
     "build": "roadhog build",
-    "lint": "eslint --ext .js src test",
-    "precommit": "npm run lint"
+    "lint": "eslint --ext .js src test"
   },
   "engines": {
     "install-node": "6.11.1"
@@ -14,7 +13,7 @@
     "babel-runtime": "^6.9.2",
     "dva": "^2.0.3",
     "enquire-js": "^0.2.1",
-    "rc-banner-anim": "^1.0.0",
+    "rc-banner-anim": "^1.0.2",
     "rc-queue-anim": "1.x",
     "rc-scroll-anim": "2.x",
     "rc-tween-one": "1.x",
