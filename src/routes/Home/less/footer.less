@@ -2,15 +2,48 @@
 
 @footer: footer0;
 .@{footer} {
-  background-color: @template-bg-color;
+  background-color: @main-bg-color;
   text-align: center;
-  height: 80px;
+  height: 140px;
   color: @template-footer-text-color;
   overflow: hidden;
   position: relative;
   span {
     display: block;
     margin: 20px auto 0;
+  }
+  &-wrapper{
+    padding: 20px;
+    .bottomContent{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 30px;
+      .iconContent{
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        img{
+          padding-left: 30px;
+        }
+      }
+
+      .textUl{
+        li{
+          float: left;
+          color: #ffffff;
+          padding-right: 20px;
+          font-size: 14px;
+        }
+      }
+      .copyright{
+        font-size: 12px;
+        color: hsla(0,0%,100%,.7);
+      }
+    }
+
   }
 }
 

@@ -15,14 +15,39 @@ class Footer extends React.Component {
       {...props}
       playScale={0.05}
     >
-      <TweenOne
-        animation={{ y: '+=30', opacity: 0, type: 'from' }}
-        key="footer"
-      >
-        <span id={`${props.id}-content`}>
-          Copyright © 2017 The Project by <a href="#">Ant Motion</a>. All Rights Reserved
-        </span>
-      </TweenOne>
+      <div className={`${props.className}-wrapper content-template`} key='footer'>
+        <TweenOne
+          animation={{ y: '+=30', opacity: 0, type: 'from' }}
+          key="footer-img"
+          className="bottomContent"
+          component="div"
+        >
+          <img src={require(`../../assets/bottomLogo.png`)} />
+          <div className="iconContent">
+            <img src={require(`../../assets/footer_icon1.png`)} />
+            <img src={require(`../../assets/footer_icon2.png`)} />
+            <img src={require(`../../assets/footer_icon3.png`)} />
+            <img src={require(`../../assets/footer_icon4.png`)} />
+          </div>
+        </TweenOne>
+        <TweenOne
+          animation={{ y: '+=30', opacity: 0, type: 'from' }}
+          key="footer-text"
+          className="bottomContent"
+          component="div"
+        >
+          <ul className="textUl">
+            <li>关于我们</li>
+            <li>费率说明</li>
+            <li>服务协议</li>
+            <li>帮助中心</li>
+            <li>API文档</li>
+            <li>工单系统</li>
+            <li>上币申请</li>
+          </ul>
+          <div className="copyright">Copyright @ 2017-2018 MKEX.com. All rights reserved</div>
+        </TweenOne>
+      </div>
     </OverPack>);
   }
 }

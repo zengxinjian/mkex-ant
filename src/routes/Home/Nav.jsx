@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TweenOne from 'rc-tween-one';
-import { Menu } from 'antd';
+import { Menu, Button } from 'antd';
 
 const Item = Menu.Item;
 
@@ -31,49 +31,59 @@ class Header extends React.Component {
       animation={{ opacity: 0, type: 'from' }}
       {...props}
     >
-      <TweenOne
-        className={`${this.props.className}-logo`}
-        animation={{ x: -30, type: 'from', ease: 'easeOutQuad' }}
-        id={`${this.props.id}-logo`}
-      >
-        <img width="100%" src="https://os.alipayobjects.com/rmsportal/mlcYmsRilwraoAe.svg" />
-      </TweenOne>
-      {isMobile ? (<div
-        className={`${this.props.className}-phone-nav${this.state.phoneOpen ? ' open' : ''}`}
-        id={`${this.props.id}-menu`}
-      >
-        <div
-          className={`${this.props.className}-phone-nav-bar`}
-          onClick={() => {
-            this.phoneClick();
-          }}
+      <div className={`${this.props.className} content-template`}>
+        <TweenOne
+          className={`${this.props.className}-logo`}
+          animation={{ x: -30, type: 'from', ease: 'easeOutQuad' }}
+          id={`${this.props.id}-logo`}
         >
-          <em />
-          <em />
-          <em />
-        </div>
-        <div
-          className={`${this.props.className}-phone-nav-text`}
+          <img width="100%" src={require(`../../assets/navLogo.png`)} />
+        </TweenOne>
+        {isMobile ? (<div
+          className={`${this.props.className}-phone-nav${this.state.phoneOpen ? ' open' : ''}`}
+          id={`${this.props.id}-menu`}
+        >
+          <div
+            className={`${this.props.className}-phone-nav-bar`}
+            onClick={() => {
+              this.phoneClick();
+            }}
+          >
+            <em />
+            <em />
+            <em />
+          </div>
+          <div
+            className={`${this.props.className}-phone-nav-text`}
+          >
+            <Menu
+              defaultSelectedKeys={['0']}
+              mode="inline"
+              theme="dark"
+            >
+              {navChildren}
+            </Menu>
+          </div>
+        </div>) : (<TweenOne
+          className={`${this.props.className}-nav`}
+          animation={{ x: 30, type: 'from', ease: 'easeOutQuad' }}
         >
           <Menu
-            defaultSelectedKeys={['0']}
-            mode="inline"
-            theme="dark"
+            mode="horizontal" defaultSelectedKeys={['0']}
+            id={`${this.props.id}-menu`}
           >
             {navChildren}
           </Menu>
-        </div>
-      </div>) : (<TweenOne
-        className={`${this.props.className}-nav`}
-        animation={{ x: 30, type: 'from', ease: 'easeOutQuad' }}
-      >
-        <Menu
-          mode="horizontal" defaultSelectedKeys={['0']}
-          id={`${this.props.id}-menu`}
-        >
-          {navChildren}
-        </Menu>
-      </TweenOne>)}
+        </TweenOne>)}
+        <TweenOne className="userLogin">
+          <Button type="ghost" key="login" id={`${props.id}-login`}>
+            登录
+          </Button>
+          <Button type="ghost" key="register" id={`${props.id}-register`}>
+            注册
+          </Button>
+        </TweenOne>
+      </div>
     </TweenOne>);
   }
 }
