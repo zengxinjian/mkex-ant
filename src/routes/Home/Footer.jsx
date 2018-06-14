@@ -8,9 +8,21 @@ class Footer extends React.Component {
     className: 'footer0',
   };
 
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     const props = { ...this.props };
     delete props.isMobile;
+
+    const mouseOver = () => {
+      this.setState({animation: {scale: '1.3'}})
+    }
+    const mouseOut = () => {
+      this.setState({animation: {scale: '1'}})
+    }
+
     return (<OverPack
       {...props}
       playScale={0.05}
