@@ -27,31 +27,26 @@ class Content extends React.Component {
           location={props.id}
         >
           <TweenOne
-            key="img"
-            animation={animType.one}
-            className={`${props.className}-img`}
-            id={`${props.id}-imgWrapper`}
-            resetStyleBool
+            animation={{ y: '+=30', opacity: 0, type: 'from' }}
+            component="h1"
+            key="h1"
+            reverseDelay={300}
+            id={`${props.id}-title`}
           >
-            <span id={`${props.id}-img`}>
-              <img width="100%" src="https://zos.alipayobjects.com/rmsportal/nLzbeGQLPyBJoli.png" />
-            </span>
+            ABOUT US
           </TweenOne>
+
           <QueueAnim
-            className={`${props.className}-text`}
-            type={animType.queue}
-            key="text"
-            leaveReverse
-            ease={['easeOutCubic', 'easeInCubic']}
-            id={`${props.id}-textWrapper`}
-          >
-            <h1 key="h1" id={`${props.id}-title`}>
-              企业资源管理
-            </h1>
-            <p key="p" id={`${props.id}-content`}>
-              云资源集中编排、弹性伸缩、持续发布和部署，高可用及容灾。云资源集中编排、弹性伸缩、持续发布和部署，高可用及容灾。云资源集中编排、弹性伸缩、持续发布和部署，高可用及容灾。
-            </p>
-          </QueueAnim>
+              type="bottom"
+              key="p"
+              className={`${props.className}-content`}
+              id={`${props.id}-content`}  >
+              <p>
+              是一家注册在香港的公司，并且在韩国、日本等多个国家与地区设立子公司与办事处。<br/>
+              MKEX是由韩国、日本等多个国家及领域的顶级人才构成的精英团队倾力打造的点对点数字资产交易平台。<br/>
+              致力于为数字资产投资用户提供安全、高效、开放的、涵盖全流程的、具备高信任保障的区块链数字资产交易和托管服务。
+              </p>
+            </QueueAnim>
         </OverPack>
       </div>
     );

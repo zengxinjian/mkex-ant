@@ -15,24 +15,10 @@ class Content extends React.Component {
     className: 'content7',
   };
 
-  getBlockChildren = (item, i) =>(
-    <li key={i} id={`${this.props.id}-block${i}`}>
-      <div className="icon">
-        <img src={item.icon} width="100%" />
-      </div>
-      <h3>{item.title}</h3>
-      <p>{item.content}</p>
-    </li>);
-
   render() {
     const props = { ...this.props };
     delete props.isMobile;
-    const dataSource = [
-      { icon: 'https://zos.alipayobjects.com/rmsportal/WBnVOjtIlGWbzyQivuyq.png', title: '一站式业务接入', content: '支付、结算、核算接入产品效率翻四倍' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/YPMsLQuCEXtuEkmXTTdk.png', title: '一站式事中风险监控', content: '在所有需求配置环节事前风险控制和质量控制能力' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/EkXWVvAaFJKCzhMmQYiX.png', title: '一站式数据运营', content: '沉淀产品接入效率和运营小二工作效率数据' },
-    ];
-    const listChildren = dataSource.map(this.getBlockChildren);
+    
     return (
       <div
         {...props}
@@ -49,14 +35,9 @@ class Content extends React.Component {
             reverseDelay={300}
             id={`${props.id}-title`}
           >
-            产品与服务
+            MORE EVENT
           </TweenOne>
-          <QueueAnim
-            component="ul" type="bottom" key="block" leaveReverse
-            id={`${props.id}-contentWrapper`}
-          >
-            {listChildren}
-          </QueueAnim>
+          
         </OverPack>
       </div>
     );

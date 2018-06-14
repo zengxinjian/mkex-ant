@@ -15,42 +15,45 @@ class Content extends React.Component {
     const props = { ...this.props };
     delete props.isMobile;
     const oneAnim = { y: '+=30', opacity: 0, type: 'from', ease: 'easeOutQuad' };
+    //数据源
     const blockArray = [
-      { icon: 'https://zos.alipayobjects.com/rmsportal/ScHBSdwpTkAHZkJ.png', title: '企业资源管理', content: '云资源集中编排、弹性伸缩、持续发布和部署，高可用及容灾。' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/NKBELAOuuKbofDD.png', title: '云安全', content: '按金融企业安全要求打造的完整云上安全体系，全方位保障金融应用及数据安全。' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png', title: '云监控', content: '分布式云环境集中监控，统一资源及应用状态视图，智能分析及故障定位。' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png', title: '移动', content: '一站式移动金融APP开发及全面监控；丰富可用组件，动态发布和故障热修复。' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/UsUmoBRyLvkIQeO.png', title: '分布式中间件', content: '金融级联机交易处理中间件，大规模分布式计算机，数万笔/秒级并发能力，严格保证交易数据统一性。' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/ipwaQLBLflRfUrg.png', title: '大数据', content: '一站式、全周期大数据协同工作平台，PB级数据处理、毫秒级数据分析工具。' },
+      { img: require('../../assets/images/资产安全.png'), content: '保护资产，安全高效'},
+      { img: require('../../assets/images/融合交易.png'), content: '融合碎片化交易'},
+      { img: require('../../assets/images/孵化院.png'), content: 'LABS孵化&研究院'},
+      { img: require('../../assets/images/数字资产.png'), content: '数字资产管理与托管'},
+      { img: require('../../assets/images/多客户端.png'), content: '多语言与全平台客户端支持'},
+      { img: require('../../assets/images/合伙人.png'), content: '全球合伙人计划'},
     ];
+    //图片列表
     const children = blockArray.map((item, i) => {
       const id = `block${i}`;
       const delay = this.getDelay(i);
       const liAnim = { opacity: 0, type: 'from', ease: 'easeOutQuad', delay };
       const childrenAnim = { ...liAnim, x: '+=10', delay: delay + 100,};
-      return (<TweenOne
-        component="li"
-        animation={liAnim}
-        key={i}
-        id={`${props.id}-${id}`}
-      >
+      return (
         <TweenOne
-          animation={{ x: '-=10', opacity: 0, type: 'from', ease: 'easeOutQuad' }}
-          className="img"
-          key="img"
+          component="li"
+          animation={liAnim}
+          key={i}
+          id={`${props.id}-${id}`}
         >
-          <img src={item.icon} width="100%" />
+          <TweenOne
+            animation={{ x: '-=10', opacity: 0, type: 'from', ease: 'easeOutQuad' }}
+            className="img"
+            key="img">
+            <img src={item.img} width="100%" />
+          </TweenOne>
+
+          <div className="text">
+            <TweenOne key="p" animation={{ ...childrenAnim, delay: delay + 200 }} component="p">
+              {item.content}
+            </TweenOne>
+          </div>
         </TweenOne>
-        <div className="text">
-          <TweenOne key="h1" animation={childrenAnim} component="h1">
-            {item.title}
-          </TweenOne>
-          <TweenOne key="p" animation={{ ...childrenAnim, delay: delay + 200 }} component="p">
-            {item.content}
-          </TweenOne>
-        </div>
-      </TweenOne>);
+      );
     });
+
+    //标题
     return (
       <div {...props} className={`content-template-wrapper ${props.className}-wrapper`}>
         <OverPack
@@ -62,18 +65,10 @@ class Content extends React.Component {
             animation={oneAnim}
             component="h1"
             id={`${props.id}-title`}
-            reverseDelay={100}
-          >
-             蚂蚁金融云提供专业的服务
+            reverseDelay={100}>
+             FUNCTIONAL INTRODUCTION
           </TweenOne>
-          <TweenOne
-            key="p"
-            animation={{ ...oneAnim, delay: 100 }}
-            component="p"
-            id={`${props.id}-titleContent`}
-          >
-            基于阿里云强大的基础资源
-          </TweenOne>
+          
           <QueueAnim
             key="ul"
             type="bottom"
