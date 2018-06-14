@@ -13,8 +13,8 @@ class Content extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      paused: false,
-      animation: {}
+      paused: true,
+      animation: []
     }
   }
 
@@ -24,19 +24,25 @@ class Content extends React.Component {
     const isMobile = props.isMobile;
     delete props.isMobile;
 
-    const animations = {
-      d: 'M60,10L60,90L140,90L140,10Z',
-      yoyo: true,
-      duration: 1000,
-    };
+    const animations = [
+      { scale: 0.7 },
+      { scale: 1 },
+      { repeat: true }
+    ];
     const { Element } = BannerAnim;
     const BgElement = Element.BgElement;
 
     const mouseOver = () => {
-      this.setState({animation: {width: '200px'}})
+      this.setState({
+        paused: false
+      })
+      console.log(paused)
     }
     const mouseOut = () => {
-      this.setState({animation: {width: '280px'}})
+      this.setState({
+        paused: true
+      })
+      console.log(paused)
     }
 
     // 手机端
@@ -71,22 +77,20 @@ class Content extends React.Component {
                ],
              }}
           >
-            <QueueAnim id="queue" key="queue">
-              <div className="leftTextContent">
+            <QueueAnim id="queue" key="queue" className="leftTextContent">
                 <span
                   className="title"
                   key="title"
                   id={`${props.id}-title`}
                 >
-            倾力打造全球化的区块链资产交易平台
-          </span>
+                  倾力打造全球化的区块链资产交易平台
+                </span>
                 <p
                   key="content"
                   id={`${props.id}-content`}
                 >
                   提供全流程、易操作、高信任保障的区块链数字资产交易和托管服务
                 </p>
-              </div>
             </QueueAnim>
             <TweenOne id="JText" className="leftTextContent">
               <Button type="ghost" key="button" id={`${props.id}-button`}>
@@ -99,7 +103,8 @@ class Content extends React.Component {
 
         <div onMouseOver={mouseOver} onMouseOut={mouseOut}>
           <TweenOne
-            animation={animation}
+            animation={animations}
+            paused={false}
             key="footer-img"
             className="rightTextContent"
             component="div">
@@ -111,7 +116,7 @@ class Content extends React.Component {
     return (
       <OverPack
         replay
-        playScale={0.8}
+        playScale={0.7}
         {...props}
       >
         {isMobile ? phoneEnd() : pcEnd() }

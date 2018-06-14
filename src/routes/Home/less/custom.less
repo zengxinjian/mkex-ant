@@ -48,7 +48,6 @@
   }
 }
 
-
 .content-template{
   //border: 1px solid red;
   width: 1200px;
@@ -56,3 +55,27 @@
   position: relative;
 }
 
+
+
+// 渐变按钮
+.button-linear-gradient-setting(@leftColor, @rightColor){
+  background: -o-linear-linear-gradient(left,@leftColor,@rightColor) !important;
+  background: -moz-linear-linear-gradient(left,@leftColor,@rightColor) !important;;
+  background: -webkit-linear-gradient(left,@leftColor,@rightColor) !important;;
+  background: -webkit-gradient(linear,left top,right top,from(@leftColor),to(@rightColor)) !important;;
+  background: linear-gradient(left,@leftColor ,@rightColor) !important;
+}
+
+// 圆角
+.border-radius-setting(@number){
+  -webkit-border-radius: @number;
+  -moz-border-radius: @number;
+  border-radius: @number;
+}
+
+// 按钮阴影
+.button-box-shadow-setting(@x: 0, @y: 0, @blur: 10px, @color: rgba(50, 250, 255, 0.75)){
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+}
