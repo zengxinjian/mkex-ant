@@ -2,28 +2,33 @@
 
 @content4: content4;
 .content4-wrapper{
-
   height: 90vh !important;
 }
 .@{content4} {
   text-align: center;
-  & > h1, & > p {
-    position: relative;
-    top: 74px;
-    text-align: center;
-    color: #fff;
-  }
-  & > p{
-    font-size: 22px !important;
-  }
-  & > h1{
-    display:inline-block;
-    padding: 5px 85px;
-    background : url(../../../assets/images/interspersed.png) no-repeat center;
-    background-size:100% 100%;
+  div{
+    & > h1, & > p {
+      position: relative;
+      top: 50px;
+      text-align: center;
+      color: #fff;
+    }
+    & > h2{
+      padding-top:90px; 
+      font-size: 22px !important;
+      color: #fff;
+    }
+    & > h1{
+      display:inline-block;
+      div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
   }
   
-  &-img-wrapper {
+  &-img-wrapper , &-img-wrapper2 {
     width: 98%;
     position: absolute;
     top: 208px;
@@ -40,7 +45,7 @@
         display: block;
         border-radius: 6px;
         padding: 10px;
-        text-align:8center;
+        text-align:8 center;
         height: 382px;
         position: relative;
         overflow: hidden;
@@ -51,13 +56,12 @@
             width: 80px;
           }
         }
-        h2{
+        h3{
           color: #CAC8FB;
           font-size: 16px;
           font-family: AppleGothic;
         }
         p{
-          padding-top: 10px;
           color:#CAC8FB;
           font-size: 14px;
           font-family: PingFangSC-Regular;
@@ -71,68 +75,28 @@
     padding-top: 450px;
   }
   &-img-wrapper2 {
-    width: 98%;
-    position: absolute;
     top: 680px;
-    margin: auto;
-    left: 0;
-    right: 0;
-    padding: 20px 0;
-    & li {
-      width: 25%;
-      padding: 1%;
-      float: left;
-      & .content-wrapper {
-        border: 1px solid #2a2580 !important;
-        display: block;
-        border-radius: 6px;
-        padding: 10px;
-        text-align:8center;
-        height: 382px;
-        position: relative;
-        overflow: hidden;
-        span{
-          img{
-            margin-top: 30px;
-            height: 80px;
-            width: 80px;
-          }
-        }
-        h2{
-          color: #CAC8FB;
-          font-size: 16px;
-          font-family: AppleGothic;
-        }
-        p{
-          padding-top: 10px;
-          color:#CAC8FB;
-          font-size: 14px;
-          font-family: PingFangSC-Regular;
-        }
-        .page-pro();
-        transition: box-shadow .3s @ease-out, transform .3s @ease-out;
-      }
-    }
   }
 }
 
 @media screen and (max-width: 767px) {
   .@{content4}-wrapper {
-    height: 2000px;
+    height: 3500px !important;
     overflow: hidden;
     .@{content4} {
+      height: 100% !important;
       width: 90%;
       > h1, > p {
         position: relative;
         top: 0;
       }
       > h1 {
-        font-size: 24px;
+        font-size: 17pt;
         margin: 40px auto 20px;
       }
 
       ul {
-        top: 80px;
+        top: 180px;
         li {
           display: block;
           width: 100%;
@@ -146,6 +110,14 @@
           }
         }
       }
+
+      .counselorP{
+        padding-top: 1650px;
+      }
+      &-img-wrapper2 {
+        top: 1880px !important;
+      }
+
     }
   }
 

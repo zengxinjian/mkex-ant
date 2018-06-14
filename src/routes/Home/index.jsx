@@ -49,6 +49,11 @@ export default class Home extends React.Component {
     const children = [
       <Nav id="nav_0_0" key="nav_0_0" isMobile={this.state.isMobile}/>,
       <Content0 id="content_10_0" key="content_10_0" isMobile={this.state.isMobile}/>,
+      // <Content1 id="content_9_0" key="content_9_0" isMobile={this.state.isMobile}/>,
+      <Content2 id="content_2_0" key="content_2_0" isMobile={this.state.isMobile}/>,
+      <Content3 id="content_4_0" key="content_4_0" isMobile={this.state.isMobile}/>,
+      <Content4 id="content_3_0" key="content_3_0" isMobile={this.state.isMobile}/>,
+      <Content5 id="content_6_0" key="content_6_0" isMobile={this.state.isMobile}/>,
       <Footer id="footer_0_0" key="footer_0_0" isMobile={this.state.isMobile}/>,
     ];
     return (
