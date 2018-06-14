@@ -1,21 +1,32 @@
 @import './custom.less';
 
 @content4: content4;
+.content4-wrapper{
 
+  height: 90vh !important;
+}
 .@{content4} {
-
-  &-wrapper {
-    background-color: #f3f3f3;
-  }
+  text-align: center;
   & > h1, & > p {
     position: relative;
-    top: 10%;
+    top: 74px;
     text-align: center;
+    color: #fff;
   }
+  & > p{
+    font-size: 22px !important;
+  }
+  & > h1{
+    display:inline-block;
+    padding: 5px 85px;
+    background : url(../../../assets/images/interspersed.png) no-repeat center;
+    background-size:100% 100%;
+  }
+  
   &-img-wrapper {
     width: 98%;
     position: absolute;
-    top: 25%;
+    top: 208px;
     margin: auto;
     left: 0;
     right: 0;
@@ -25,38 +36,81 @@
       padding: 1%;
       float: left;
       & .content-wrapper {
-        border: 1px solid @line-color;
+        border: 1px solid #2a2580 !important;
         display: block;
-        background: #fff;
         border-radius: 6px;
         padding: 10px;
-        text-align: center;
-        height: 220px;
+        text-align:8center;
+        height: 382px;
         position: relative;
         overflow: hidden;
-        .page-pro();
-        transition: box-shadow .3s @ease-out, transform .3s @ease-out;
-        & > span {
-          height: 100%;
-          display: block;
-          background: @line-color;
-          padding: 5%;
-        }
-        & p {
-          position: absolute;
-          width: 100%;
-          background: fade(@primary-color, 75);
-          left: 0;
-          bottom: -30px;
-          line-height: 30px;
-          color: #fff;
-          transition: bottom .3s @ease-out, background .3s @ease-out, color .3s @ease-out, line-height .3s @ease-out;
-        }
-        &:hover {
-          & p {
-            bottom: 0;
+        span{
+          img{
+            margin-top: 30px;
+            height: 80px;
+            width: 80px;
           }
         }
+        h2{
+          color: #CAC8FB;
+          font-size: 16px;
+          font-family: AppleGothic;
+        }
+        p{
+          padding-top: 10px;
+          color:#CAC8FB;
+          font-size: 14px;
+          font-family: PingFangSC-Regular;
+        }
+        .page-pro();
+        transition: box-shadow .3s @ease-out, transform .3s @ease-out;
+      }
+    }
+  }
+  .counselorP{
+    padding-top: 450px;
+  }
+  &-img-wrapper2 {
+    width: 98%;
+    position: absolute;
+    top: 680px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    & li {
+      width: 25%;
+      padding: 1%;
+      float: left;
+      & .content-wrapper {
+        border: 1px solid #2a2580 !important;
+        display: block;
+        border-radius: 6px;
+        padding: 10px;
+        text-align:8center;
+        height: 382px;
+        position: relative;
+        overflow: hidden;
+        span{
+          img{
+            margin-top: 30px;
+            height: 80px;
+            width: 80px;
+          }
+        }
+        h2{
+          color: #CAC8FB;
+          font-size: 16px;
+          font-family: AppleGothic;
+        }
+        p{
+          padding-top: 10px;
+          color:#CAC8FB;
+          font-size: 14px;
+          font-family: PingFangSC-Regular;
+        }
+        .page-pro();
+        transition: box-shadow .3s @ease-out, transform .3s @ease-out;
       }
     }
   }
