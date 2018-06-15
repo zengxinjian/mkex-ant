@@ -36,13 +36,13 @@ class Content extends React.Component {
       this.setState({
         paused: false
       })
-      console.log(paused)
+      // console.log(paused)
     }
     const mouseOut = () => {
       this.setState({
         paused: true
       })
-      console.log(paused)
+      // console.log(paused)
     }
 
     // 手机端

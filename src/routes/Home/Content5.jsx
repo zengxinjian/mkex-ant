@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BannerAnim, { Element } from 'rc-banner-anim';
 import TweenOne, { TweenOneGroup } from 'rc-tween-one';
+import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
+
 import 'rc-banner-anim/assets/index.css';
 const BgElement = Element.BgElement;
-import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 
 class Content extends React.Component {
 
@@ -30,7 +31,7 @@ class Content extends React.Component {
       </div>
     </li>);
   }
-
+  getDelay = e => e % 3 * 100 + Math.floor(e / 3) * 100 + 300;
   getEnterAnim = (e, isMobile) => {
     const index = e.index;
     const delay = isMobile ? index * 50 + 200 : index % 4 * 100 + Math.floor(index / 4) * 100 + 300;
@@ -56,34 +57,54 @@ class Content extends React.Component {
     ];
     const childrenToRender = dataArray.map(this.getChildrenToRender);
     const childrenToRender2 = counselorArray.map(this.getChildrenToRender);
+    const allArray = dataArray.concat(counselorArray);
+
+    const children = allArray.map((item, i) => {
+      const id = `block${i}`;
+      const delay = this.getDelay(i);
+      const liAnim = { opacity: 0, type: 'from', ease: 'easeOutQuad', delay };
+      const childrenAnim = { ...liAnim, x: '+=10', delay: delay + 100, };
+      return (
+        <Element
+          prefixCls="banner-user-elem"
+          key={i}
+        >
+          
+          <TweenOne className="banner-user-img" animation={{ y: 30, opacity: 0, type: 'from' }}>
+            <img src={item.img} width="100%" />
+          </TweenOne>
+          <TweenOne className="banner-user-title" animation={{ y: 30, opacity: 0, type: 'from' }}>
+            {item.title}
+          </TweenOne>
+          <TweenOne className="banner-user-text"
+            animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
+          >
+            {item.content}
+          </TweenOne>
+        </Element>
+      );
+    });
 
     const phoneEnd = () => (
       <div key="phoneEnd">
-        <BannerAnim prefixCls="banner-user" autoPlay={true}>
-          <Element
-            prefixCls="banner-user-elem"
-            key="0"
-          >
-            <BgElement
-              key="bg"
-              className="bg"
-              style={{
-                background: '#364D79',
-              }}
-            />
-          </Element>
-          <Element
-            prefixCls="banner-user-elem"
-            key="1"
-          >
-            <BgElement
-              key="bg"
-              className="bg"
-              style={{
-                background: '#64CBCC',
-              }}
-            />
-          </Element>
+
+        <TweenOne
+          animation={{ y: '+=30', opacity: 0, type: 'from', ease: 'easeOutQuad' }}
+          component="h1"
+          key="h1"
+          reverseDelay={300}
+          id={`${props.id}-title`}
+        >
+          <div>
+            <img src={require("../../assets/images/left.png")} />
+            <span>TEAM IMTRODUCTION</span>
+            <img src={require("../../assets/images/right.png")} />
+          </div>
+          <p>团队介绍</p>
+        </TweenOne>
+
+        <BannerAnim prefixCls="banner-user">
+          {children}
         </BannerAnim>
       </div>
     )
@@ -154,11 +175,10 @@ class Content extends React.Component {
     return (
       <div
         {...props}
-        playScale={0.7}
-        key="s"
         className="content-template-wrapper content4-wrapper"
       >
         <OverPack
+          playScale={0.7}
           className={`content-template ${props.className}`}
         >
           {isMobile ? phoneEnd() : pcEnd()}
