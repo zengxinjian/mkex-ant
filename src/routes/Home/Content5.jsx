@@ -58,7 +58,7 @@ class Content extends React.Component {
     const childrenToRender2 = counselorArray.map(this.getChildrenToRender);
 
     const phoneEnd = () => (
-      <div>
+      <div key="phoneEnd">
         <BannerAnim prefixCls="banner-user" autoPlay={true}>
           <Element
             prefixCls="banner-user-elem"
