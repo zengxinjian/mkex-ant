@@ -46,7 +46,7 @@ class Content extends React.Component {
     )
 
     const pcEnd = () => (
-      <div key="pcEnd">
+      <div key="pcEnd" className="pcContent">
         <TweenOne
           animation={{ y: '+=30', opacity: 0, type: 'from' }}
           component="h1"
@@ -54,8 +54,12 @@ class Content extends React.Component {
           reverseDelay={300}
           id={`${props.id}-title`}
         >
-          ABOUT US
-          </TweenOne>
+          <div className="titleName">
+            <img className="titleLeft" src={require(`../../assets/images/left.png`)} />
+            <label className="title">ABOUT US</label>
+            <img className="titleRight" src={require(`../../assets/images/right.png`)} />
+          </div>
+        </TweenOne>
 
         <QueueAnim
           type="bottom"

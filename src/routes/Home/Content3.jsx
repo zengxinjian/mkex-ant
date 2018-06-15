@@ -45,7 +45,6 @@ class Content extends React.Component {
             key="img">
             <img src={item.img} width="100%" />
           </TweenOne>
-
           <div className="text">
             <TweenOne key="p" animation={{ ...childrenAnim, delay: delay + 200 }} component="p">
               {item.content}
@@ -84,17 +83,17 @@ class Content extends React.Component {
     )
 
     const pcEnd = () => (
-      <div key="pcEnd">
+      <div key="pcEnd" className="pcContent">
         <TweenOne
           key="h1"
           animation={oneAnim}
           component="h1"
           id={`${props.id}-title`}
           reverseDelay={100}>
-          <div>
-            <img src={require("../../assets/images/left.png")} />
-            <span>FUNCTIONAL INTRODUCTION</span>
-            <img src={require("../../assets/images/right.png")} />
+          <div className="titleName">
+            <img className="titleLeft" src={require(`../../assets/images/left.png`)} />
+            <label className="title">FUNCTIONAL INTRODUCTION</label>
+            <img className="titleRight" src={require(`../../assets/images/right.png`)} />
           </div>
         </TweenOne>
 
@@ -114,6 +113,7 @@ class Content extends React.Component {
     return (
       <div
         {...props}
+        playScale={0.9}
         className={`content-template-wrapper content-half-wrapper ${props.className}-wrapper`}
       >
         <OverPack

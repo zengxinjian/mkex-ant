@@ -2,31 +2,28 @@
 
 @content2: content2;
 .@{content2} {
-  height: 591px !important;
   border-bottom: 1px solid #2a2580;
   text-align: center;
   > h1, > p {
-    
     text-align: center;
     position: relative;
-    top:30px;
   }
   div{
-  > h1{
-    
-    padding-top: 50px;
-    display: inline-block;
-    div{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
+    > h1{
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+      div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
     }
   }
-}
   &-contentWrapper {
     position: relative;
-    top: 75px;
-    height: 60%;
+    min-width: 1200px;
     ul {
       > li {
         display: inline-block;
@@ -34,10 +31,6 @@
         padding-top:45px;
         vertical-align: top;
         .img {
-          img{
-              width: 85px;
-              height: 100px;
-          }
           display: inline-block;
           vertical-align: top;
         }
@@ -47,6 +40,7 @@
           width: 100%;
           display: inline-block;
           padding-top: 5%;
+          font-size: 16px;
         }
       }
     }
@@ -76,12 +70,12 @@
         margin: 20px auto;
         height: auto;
         ul {
-          
+
           li:nth-of-type(odd){
             border-bottom: 1px solid #2a2580;
             border-right: 1px solid #2a2580;
           }
-          li:nth-of-type(even){ 
+          li:nth-of-type(even){
             border-bottom: 1px solid #2a2580;
           }
           li:last-child , li:nth-child(5){
