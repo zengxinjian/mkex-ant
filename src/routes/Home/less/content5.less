@@ -2,25 +2,23 @@
 
 @content4: content4;
 .content4-wrapper{
-  height: 90vh !important;
 }
 .@{content4} {
   text-align: center;
   div{
     & > h1, & > p {
-      position: relative;
-      top: 50px;
       text-align: center;
       color: #fff;
     }
     & > h2{
-      padding-top:90px; 
       font-size: 22px !important;
       color: #fff;
+      margin-bottom: 20px;
     }
     & > h1{
       display:inline-block;
       padding: 15px;
+      margin-bottom: 50px;
       div{
         display: flex;
         flex-direction: row;
@@ -28,15 +26,11 @@
       }
     }
   }
-  
+
   &-img-wrapper , &-img-wrapper2 {
     width: 98%;
-    position: absolute;
-    top: 208px;
     margin: auto;
-    left: 0;
-    right: 0;
-    padding: 20px 0;
+    display: inline-block;
     & li {
       width: 25%;
       padding: 1%;
@@ -47,12 +41,12 @@
         border-radius: 6px;
         padding: 10px;
         text-align:8 center;
-        height: 382px;
+        height: 390px;
         position: relative;
         overflow: hidden;
         span{
           img{
-            margin-top: 30px;
+            margin: 10px 0;
             height: 80px;
             width: 80px;
           }
@@ -60,11 +54,13 @@
         h3{
           color: #CAC8FB;
           font-size: 16px;
+          margin-bottom: 10px;
           font-family: AppleGothic;
         }
         p{
           color:#CAC8FB;
-          font-size: 14px;
+          font-size: 15px;
+          line-height: 24px;
           font-family: PingFangSC-Regular;
         }
         .page-pro();
@@ -73,7 +69,8 @@
     }
   }
   .counselorP{
-    padding-top: 450px;
+    position: relative;
+    margin-top: 20px;
   }
   &-img-wrapper2 {
     top: 680px;
@@ -82,7 +79,7 @@
 
 @media screen and (max-width: 767px) {
   .@{content4}-wrapper {
-    height: 800px !important;
+    height: 700px !important;
     overflow: hidden;
     top:-90px;
     .@{content4} {
@@ -94,24 +91,40 @@
           font-size: 17pt;
           margin: 0px auto 0px;
         }
-      }
-      ul {
-        top: 180px;
-        li {
-          display: block;
-          width: 100%;
-          div{
-            span {
-              img{
-              }
-            }
-            p {
+        .banner-user{
+          height: 580px;
+          width: 60%;
+          margin: 0px auto;
+          .banner-user-elem{
+            top:120px;
+            height: 420px;
+            border: 1px solid #2a2580 !important;
+            border-radius:15px;
+            img{
+              width: 25%;
               position: relative;
-              bottom: 0;
+              top: -55px;
             }
           }
+          .banner-user-title{
+            top: -30px;
+            color: #fff;
+            font-size: 18px;
+          }
+          .banner-user-text{
+            width: 80%;
+            margin: 0 auto;
+            text-align: left;
+            line-height: 2em;
+            color: #CAC8FB;
+            font-size: 16px;
+          }
+        }
+        .next,.prev{
+          display: none;
         }
       }
+
 
       .counselorP{
         padding-top: 1650px;

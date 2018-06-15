@@ -2,6 +2,8 @@ import React from 'react';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
+import ScrollAnim from 'rc-scroll-anim';
+const ScrollOverPack = ScrollAnim.OverPack;
 
 class Content extends React.Component {
 
@@ -15,7 +17,7 @@ class Content extends React.Component {
     const props = { ...this.props };
     const isMobile = props.isMobile;
     delete props.isMobile;
-    const oneAnim = { y: '+=30', opacity: 0, type: 'from', ease: 'easeOutQuad' };
+    const oneAnim = { y: '+=30', type: 'from', ease: 'easeOutQuad', opacity: 1 };
     //数据源
     const blockArray = [
       { img: require('../../assets/images/资产安全.png'), content: '保护资产，安全高效' },
@@ -100,6 +102,7 @@ class Content extends React.Component {
         <QueueAnim
           key="ul"
           type="bottom"
+          leaveReverse={true}
           className={`${props.className}-contentWrapper`}
           id={`${props.id}-contentWrapper`}
         >
@@ -113,12 +116,12 @@ class Content extends React.Component {
     return (
       <div
         {...props}
-        playScale={0.9}
         className={`content-template-wrapper content-half-wrapper ${props.className}-wrapper`}
       >
         <OverPack
           className={`content-template ${props.className}`}
           location={props.id}
+          always={false}
         >
           {isMobile ? phoneEnd() : pcEnd()}
         </OverPack>

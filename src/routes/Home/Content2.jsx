@@ -48,7 +48,7 @@ class Content extends React.Component {
     const pcEnd = () => (
       <div key="pcEnd" className="pcContent">
         <TweenOne
-          animation={{ y: '+=30', opacity: 0, type: 'from' }}
+          animation={{ y: '+=30', opacity: 0, type: 'from', opacity: 1}}
           component="h1"
           key="h1"
           reverseDelay={300}
@@ -84,6 +84,7 @@ class Content extends React.Component {
         <OverPack
           className={`content-template ${props.className}`}
           location={props.id}
+          always={false}
         >
           {isMobile ? phoneEnd() : pcEnd()}
         </OverPack>

@@ -95,6 +95,7 @@ class Content extends React.Component {
         <OverPack
           className={`content-template ${props.className}`}
           location={props.id}
+          always={false}
         >
           {isMobile ? phoneEnd():pcEnd()}
         </OverPack>
