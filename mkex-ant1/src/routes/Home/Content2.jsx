@@ -19,7 +19,7 @@ class Content extends React.Component {
     }
 
     const phoneEnd = () => (
-      <div className="phone-content2" key="phoneEnd">
+      <div className="phone-content2">
         <TweenOne
           animation={{ y: '+=30', opacity: 0, type: 'from' }}
           component="h1"
@@ -46,7 +46,7 @@ class Content extends React.Component {
     )
 
     const pcEnd = () => (
-      <div key="pcEnd">
+      <div>
         <TweenOne
           animation={{ y: '+=30', opacity: 0, type: 'from' }}
           component="h1"

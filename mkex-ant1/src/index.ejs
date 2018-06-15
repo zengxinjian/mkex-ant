@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MKEX</title>
+  <link rel="stylesheet" href="/index.css" />
+  <link rel='shortcut icon' href='http://cibyungou.oss-cn-shenzhen.aliyuncs.com/3681147d-58cd-435f-9c0c-27bf134e3f42.png' />
+  <script>
+    (function(doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function() {
+          var clientWidth = docEl.clientWidth;
+          if(!clientWidth) return;
+//						if(clientWidth >= 640) {
+//							docEl.style.fontSize = '100px';
+//						} else {
+//							docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+//						}
+          docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+        };
+
+      if(!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>

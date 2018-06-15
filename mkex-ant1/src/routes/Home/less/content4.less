@@ -1,0 +1,92 @@
+@import './custom.less';
+
+@content1: content1;
+
+.@{content1} {
+  width: 100%;
+  height: 291px !important;
+  &-img {
+    height: 100%;
+    width: 40%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    span {
+      display: block;
+      position: absolute;
+      width: 55%;
+      left: 194px;
+      line-height: 30vh;
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+  &-text {
+    display: block;
+    width: 55%;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    & p, & h1 {
+      position: relative !important;
+      width: 75%;
+      float: right;
+      color: #fff;
+    }
+    & h1 {
+      font-size: 32px;
+      font-weight: normal;
+    }
+    & p {
+      line-height: 2em;
+      font-size: 15px;
+      margin-top: 27px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{content1}-wrapper {
+    height: 100%;
+    .@{content1} {
+      height: 100% !important;
+      top:-100px;
+      overflow: hidden;
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      div{
+        height: 100%;
+        h1{
+          font-size: 17pt;
+          font-family: Futura-Bold;
+          div{
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+          }
+        }
+        div{
+          height: 100%;
+          width: 100%;
+          span{
+            left: 100px;
+          }
+        }
+        > p{
+          width: 90%;
+          margin: 0px auto;
+          padding-top: 320px;
+          color: #fff;
+          font-size: 13pt;
+          text-align: left;
+          font-family: PingFangSC-Regular;
+        }
+      }
+    }
+  }
+}

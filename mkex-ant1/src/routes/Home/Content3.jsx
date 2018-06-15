@@ -56,7 +56,7 @@ class Content extends React.Component {
     });
 
     const phoneEnd = () => (
-      <div key="phoneEnd">
+      <div>
         <TweenOne
           key="h1"
           animation={oneAnim}
@@ -84,7 +84,7 @@ class Content extends React.Component {
     )
 
     const pcEnd = () => (
-      <div key="pcEnd">
+      <div>
         <TweenOne
           key="h1"
           animation={oneAnim}

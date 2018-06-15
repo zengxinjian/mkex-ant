@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BannerAnim, { Element } from 'rc-banner-anim';
-import TweenOne, { TweenOneGroup } from 'rc-tween-one';
+import TweenOne from 'rc-tween-one';
 import 'rc-banner-anim/assets/index.css';
 const BgElement = Element.BgElement;
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
@@ -89,7 +89,7 @@ class Content extends React.Component {
     )
 
     const pcEnd = () => (
-      <div key="pcEnd">
+      <div>
         <TweenOne
           animation={{ y: '+=30', opacity: 0, type: 'from', ease: 'easeOutQuad' }}
           component="h1"
@@ -112,7 +112,7 @@ class Content extends React.Component {
           id={`${props.id}-content`}
         >
           - 核心团队 -
-        </TweenOne>
+          </TweenOne>
         <TweenOneGroup
           className={`${props.className}-img-wrapper`}
           component="ul"
@@ -134,7 +134,7 @@ class Content extends React.Component {
           id={`${props.id}-content`}
         >
           - 顾问团队 -
-        </TweenOne>
+          </TweenOne>
 
         <TweenOneGroup
           className={`${props.className}-img-wrapper2`}

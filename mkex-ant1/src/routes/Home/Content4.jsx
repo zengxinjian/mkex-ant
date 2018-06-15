@@ -20,7 +20,7 @@ class Content extends React.Component {
     };
 
     const phoneEnd = () => (
-      <div key="phoneEnd">
+      <div>
         <TweenOne
           key="h1"
           animation={animType.one}
@@ -53,7 +53,7 @@ class Content extends React.Component {
       </div>
     )
     const pcEnd = () => (
-      <div key="pcEnd">
+      <div>
         <QueueAnim
           type={animType.queue}
           className={`${props.className}-text`}

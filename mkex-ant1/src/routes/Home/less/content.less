@@ -1,0 +1,38 @@
+@content: content-template;
+.@{content}-wrapper {
+  width: 100%;
+  background: @main-bg-color;
+  position: relative;
+  // min-height: 685px;
+  align-items: center;
+  display: flex;
+  .@{content} {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    h1 {
+      font-family: Futura-Bold;
+      font-size: 20px;
+      font-weight: normal;
+      color:aliceblue;
+      line-height: 48px;
+      font-weight:bolder; 
+    }
+    > p {
+      font-size: 12px;
+      margin: 20px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{content}-wrapper {
+    .@{content} {
+      h1 {
+        font-size: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import './custom.less';
+
+@content7: content7;
+
+.@{content7} {
+  width: 100%;
+  height:100% !important;
+  &-wrapper {
+    overflow: hidden;
+    text-align: center;
+  }
+  > h1 {
+    display:inline-block;
+    padding: 5px 60px;
+    text-align: center;
+    position: relative;
+    top: 76px;
+    margin: auto;
+    background: url("../../../assets/images/interspersed.png") no-repeat center;
+    background-size: 100% 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{content7}-wrapper {
+    height: 760px;
+    .@{content7} {
+      width: 90%;
+      max-width: 100%;
+      > h1{
+        top: auto;
+        margin: 40px auto 20px;
+      }
+    }
+  }
+}
