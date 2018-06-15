@@ -154,6 +154,8 @@ class Content extends React.Component {
     return (
       <div
         {...props}
+        playScale={0.7}
+        key="s"
         className="content-template-wrapper content4-wrapper"
       >
         <OverPack
