@@ -43,7 +43,7 @@ class Content extends React.Component {
           resetStyleBool
         >
           <span id={`${props.id}-img`}>
-            <img width="100%" src={require('../../assets/phone/integralvalue.png')} />
+            <img width="100%" src={require(`../../assets/phone/integralvalue.png`)} />
           </span>
         </TweenOne>
 
@@ -81,7 +81,7 @@ class Content extends React.Component {
           resetStyleBool
         >
           <span id={`${props.id}-img`}>
-            <img width="100%" src={require('../../assets/images/integralvalue.png')} />
+            <img width="100%" src={require(`../../assets/images/integralvalue.png`)} />
           </span>
         </TweenOne>
       </div>
