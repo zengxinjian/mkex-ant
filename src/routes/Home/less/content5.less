@@ -20,6 +20,7 @@
     }
     & > h1{
       display:inline-block;
+      padding: 15px;
       div{
         display: flex;
         flex-direction: row;
@@ -81,32 +82,33 @@
 
 @media screen and (max-width: 767px) {
   .@{content4}-wrapper {
-    height: 3500px !important;
+    height: 800px !important;
     overflow: hidden;
+    top:-90px;
     .@{content4} {
       height: 100% !important;
       width: 90%;
-      > h1, > p {
-        position: relative;
-        top: 0;
+      div{
+        h1 {
+          position: relative;
+          font-size: 17pt;
+          margin: 0px auto 0px;
+        }
       }
-      > h1 {
-        font-size: 17pt;
-        margin: 40px auto 20px;
-      }
-
       ul {
         top: 180px;
         li {
           display: block;
           width: 100%;
-          padding: 2%;
-          span {
-            height: 168px;
-          }
-          p {
-            position: relative;
-            bottom: 0;
+          div{
+            span {
+              img{
+              }
+            }
+            p {
+              position: relative;
+              bottom: 0;
+            }
           }
         }
       }

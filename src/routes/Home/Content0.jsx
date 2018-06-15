@@ -103,6 +103,15 @@ class Content extends React.Component {
             key="footer-img"
             className="rightTextContent"
             component="div">
+            <div>
+            <h2>公告/Notice</h2>
+            <p>Etherium Classic (ETC) 暂停和退出说明 (正常化完成)</p>
+            <p>WC币火热上线"王牌交易员"活动全新开启</p>
+            <p>Etherium Classic (ETC) 暂停和退出说明 (正常化完成)</p> 
+            <p>WC币火热上线"王牌交易员"活动全新开启</p>
+            <p>Etherium Classic (ETC) 暂停和退出说明 (正常化完成)</p> 
+            <span>更多...</span>
+            </div>
           </TweenOne>
         </div>
       </div>
