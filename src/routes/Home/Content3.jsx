@@ -64,9 +64,9 @@ class Content extends React.Component {
           id={`${props.id}-title`}
           reverseDelay={100}>
           <div>
-            <img src={require("../../assets/images/left.png")} />
+            {/* <img src={require("../../assets/images/left.png")} /> */}
             <span>FUNCTIONAL INTRODUCTION</span>
-            <img src={require("../../assets/images/right.png")} />
+            {/* <img src={require("../../assets/images/right.png")} /> */}
           </div>
         <p>功能介绍</p>
         </TweenOne>

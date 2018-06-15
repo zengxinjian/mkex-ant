@@ -18,10 +18,10 @@ class Footer extends React.Component {
     delete props.isMobile;
 
     const mouseOver = () => {
-      this.setState({animation: {scale: '1.3'}})
+      this.setState({ animation: { scale: '1.3' } })
     }
     const mouseOut = () => {
-      this.setState({animation: {scale: '1'}})
+      this.setState({ animation: { scale: '1' } })
     }
 
     // 手机端
@@ -39,6 +39,8 @@ class Footer extends React.Component {
     // PC端
     const pcEnd = ()=>(
       <div className={`${props.className}-wrapper content-template`} key='footer'>
+    const phoneEnd = () =>(
+      <div>
         <TweenOne
           animation={{ y: '+=30', opacity: 0, type: 'from' }}
           key="footer-img"
@@ -46,12 +48,17 @@ class Footer extends React.Component {
           component="div"
         >
           <img src={require(`../../assets/bottomLogo.png`)} />
-          <div className="iconContent">
-            <img src={require(`../../assets/footer_icon1.png`)} />
-            <img src={require(`../../assets/footer_icon2.png`)} />
-            <img src={require(`../../assets/footer_icon3.png`)} />
-            <img src={require(`../../assets/footer_icon4.png`)} />
-          </div>
+        </TweenOne>
+        <TweenOne
+          animation={{ y: '+=30', opacity: 0, type: 'from' }}
+          key="footer-icon"
+          component="div"
+        >
+        <div className="iconContent">
+            <img src={require(`../../assets/phone/footer_icon1.png`)} />
+            <img src={require(`../../assets/phone/footer_icon2.png`)} />
+            <img src={require(`../../assets/phone/footer_icon3.png`)} />
+        </div>
         </TweenOne>
         <TweenOne
           animation={{ y: '+=30', opacity: 0, type: 'from' }}
@@ -59,15 +66,6 @@ class Footer extends React.Component {
           className="bottomContent"
           component="div"
         >
-          <ul className="textUl">
-            <li>关于我们</li>
-            <li>费率说明</li>
-            <li>服务协议</li>
-            <li>帮助中心</li>
-            <li>API文档</li>
-            <li>工单系统</li>
-            <li>上币申请</li>
-          </ul>
           <div className="copyright">Copyright @ 2017-2018 MKEX.com. All rights reserved</div>
         </TweenOne>
       </div>
@@ -77,7 +75,9 @@ class Footer extends React.Component {
       {...props}
       playScale={0.05}
     >
-      { isMobile ? phoneEnd() : pcEnd() }
+      <div className={`${props.className}-wrapper content-template`} key='footer'>
+        {isMobile ? phoneEnd() : pcEnd()}
+      </div>
     </OverPack>);
   }
 }
