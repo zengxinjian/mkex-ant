@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TweenOne, { TweenOneGroup } from 'rc-tween-one';
+import BannerAnim, { Element } from 'rc-banner-anim';
+import TweenOne from 'rc-tween-one';
+import 'rc-banner-anim/assets/index.css';
+const BgElement = Element.BgElement;
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 
 class Content extends React.Component {
@@ -56,45 +59,32 @@ class Content extends React.Component {
 
     const phoneEnd = () => (
       <div>
-        <TweenOne
-          animation={{ y: '+=30', opacity: 0, type: 'from', ease: 'easeOutQuad' }}
-          component="h1"
-          key="h1"
-          reverseDelay={300}
-          id={`${props.id}-title`}
-        >
-          <div>
-            <img src={require("../../assets/images/left.png")} />
-            <span>TEAM IMTRODUCTION</span>
-            <img src={require("../../assets/images/right.png")} />
-          </div>
-          <p>团队介绍</p>
-        </TweenOne>
-
-        <TweenOneGroup
-          className={`${props.className}-img-wrapper`}
-          component="ul"
-          key="ul"
-          enter={(e) => {
-            return this.getEnterAnim(e, isMobile)
-          }}
-          leave={{ y: '+=30', opacity: 0, ease: 'easeOutQuad' }}
-          id={`${props.id}-ul`}
-        >
-          {childrenToRender}
-        </TweenOneGroup>
-        <TweenOneGroup
-          className={`${props.className}-img-wrapper2`}
-          component="ul"
-          key="ul2"
-          enter={(e) => {
-            return this.getEnterAnim(e, isMobile)
-          }}
-          leave={{ y: '+=30', opacity: 0, ease: 'easeOutQuad' }}
-          id={`${props.id}-ul`}
-        >
-          {childrenToRender2}
-        </TweenOneGroup>
+        <BannerAnim prefixCls="banner-user" autoPlay={true}>
+          <Element
+            prefixCls="banner-user-elem"
+            key="0"
+          >
+            <BgElement
+              key="bg"
+              className="bg"
+              style={{
+                background: '#364D79',
+              }}
+            />
+          </Element>
+          <Element
+            prefixCls="banner-user-elem"
+            key="1"
+          >
+            <BgElement
+              key="bg"
+              className="bg"
+              style={{
+                background: '#64CBCC',
+              }}
+            />
+          </Element>
+        </BannerAnim>
       </div>
     )
 

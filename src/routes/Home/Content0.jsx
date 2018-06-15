@@ -119,7 +119,7 @@ class Content extends React.Component {
         playScale={0.7}
         {...props}
       >
-        {isMobile ? phoneEnd() : pcEnd() }
+        { isMobile ? phoneEnd() : pcEnd() }
       </OverPack>
     );
   }

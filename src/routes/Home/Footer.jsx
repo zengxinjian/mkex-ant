@@ -14,6 +14,7 @@ class Footer extends React.Component {
 
   render() {
     const props = { ...this.props };
+    const isMobile = props.isMobile;
     delete props.isMobile;
 
     const mouseOver = () => {
@@ -23,10 +24,20 @@ class Footer extends React.Component {
       this.setState({animation: {scale: '1'}})
     }
 
-    return (<OverPack
-      {...props}
-      playScale={0.05}
-    >
+    // 手机端
+    const phoneEnd = ()=>(
+      <div className="footer-content">
+        <img src={require(`../../assets/bottomLogo.png`)} />
+        <div className="iconContent">
+          <img src={require(`../../assets/footer_icon1.png`)} />
+          <img src={require(`../../assets/footer_icon2.png`)} />
+          <img src={require(`../../assets/footer_icon3.png`)} />
+        </div>
+        <div className="copyright">Copyright @ 2017-2018 MKEX.com. All rights reserved</div>
+      </div>
+    )
+    // PC端
+    const pcEnd = ()=>(
       <div className={`${props.className}-wrapper content-template`} key='footer'>
         <TweenOne
           animation={{ y: '+=30', opacity: 0, type: 'from' }}
@@ -60,6 +71,13 @@ class Footer extends React.Component {
           <div className="copyright">Copyright @ 2017-2018 MKEX.com. All rights reserved</div>
         </TweenOne>
       </div>
+    )
+
+    return (<OverPack
+      {...props}
+      playScale={0.05}
+    >
+      { isMobile ? phoneEnd() : pcEnd() }
     </OverPack>);
   }
 }
