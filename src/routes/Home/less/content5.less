@@ -81,25 +81,39 @@
   .@{content4}-wrapper {
     height: 700px !important;
     overflow: hidden;
-    top:-90px;
     .@{content4} {
       height: 100% !important;
       width: 90%;
       div{
         h1 {
           position: relative;
-          font-size: 17pt;
-          margin: 0px auto 0px;
+          font-size: 24px;
+          margin: 0px auto 20px;
+        }
+        .bannerAnmin{
+          position: absolute;
+          width: 90%;
+          height: 420px;
+          border: 1px solid #2a2580 !important;
+          bottom: -120px;
+          top: 0;
+          margin: auto;
+          left: 0;
+          right: 0;
+          .border-radius-setting(15px);
+          overflow: hidden;
+          background-color: #060439;
         }
         .banner-user{
-          height: 580px;
-          width: 60%;
+          height: 520px;
+          width: 85%;
           margin: 0px auto;
+          position: relative;
+          z-index: 10;
           .banner-user-elem{
-            top:120px;
-            height: 420px;
-            border: 1px solid #2a2580 !important;
-            border-radius:15px;
+            top:60px;
+            height: 400px;
+            //border: 1px solid #2a2580 !important;
             img{
               width: 25%;
               position: relative;

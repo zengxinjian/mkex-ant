@@ -69,7 +69,6 @@ class Content extends React.Component {
           prefixCls="banner-user-elem"
           key={i}
         >
-
           <TweenOne className="banner-user-img" animation={{ y: 30, opacity: 0, type: 'from' }}>
             <img src={item.img} width="100%" />
           </TweenOne>
@@ -86,7 +85,7 @@ class Content extends React.Component {
     });
 
     const phoneEnd = () => (
-      <div key="phoneEnd">
+      <div key="phoneEnd" className="phoneContent">
         <TweenOne
           animation={{ y: '+=30', opacity: 0, type: 'from', ease: 'easeOutQuad' }}
           component="h1"
@@ -94,17 +93,18 @@ class Content extends React.Component {
           reverseDelay={300}
           id={`${props.id}-title`}
         >
-          <div>
-            <img src={require("../../assets/images/left.png")} />
-            <span>TEAM IMTRODUCTION</span>
-            <img src={require("../../assets/images/right.png")} />
+          <div className="titleName_main">
+            <img className="titleLeft" src={require(`../../assets/images/left.png`)} />
+            <label className="title">TEAM IMTRODUCTION</label>
+            <img className="titleRight" src={require(`../../assets/images/right.png`)} />
           </div>
-          <p>团队介绍</p>
+          <p style={{fontSize: '22px'}}>团队介绍</p>
         </TweenOne>
 
         <BannerAnim prefixCls="banner-user">
           {children}
         </BannerAnim>
+        <div className="bannerAnmin" key="sss"></div>
       </div>
     )
 
@@ -117,7 +117,7 @@ class Content extends React.Component {
           reverseDelay={300}
           id={`${props.id}-title`}
         >
-          <div className="titleName">
+          <div className="titleName_main">
             <img className="titleLeft" src={require(`../../assets/images/left.png`)} />
             <label className="title">TEAM IMTRODUCTION</label>
             <img className="titleRight" src={require(`../../assets/images/right.png`)} />

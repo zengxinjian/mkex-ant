@@ -92,7 +92,7 @@ class Content extends React.Component {
           component="h1"
           id={`${props.id}-title`}
           reverseDelay={100}>
-          <div className="titleName">
+          <div className="titleName_main">
             <img className="titleLeft" src={require(`../../assets/images/left.png`)} />
             <label className="title">FUNCTIONAL INTRODUCTION</label>
             <img className="titleRight" src={require(`../../assets/images/right.png`)} />

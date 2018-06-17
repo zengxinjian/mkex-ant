@@ -82,7 +82,7 @@
 
 
 // 标题样式
-.titleName{
+.titleName_main{
   height: 60px;
   display: inline-block;
   position: relative;
@@ -102,5 +102,19 @@
     position: absolute;
     right: -45px;
     top: 5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .titleName_main{
+    .title{
+      font-size: 20px;
+    }
+    .titleLeft{
+      left: -24px;
+    }
+    .titleRight{
+      right: -20px;
+    }
   }
 }

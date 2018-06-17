@@ -54,7 +54,7 @@ class Content extends React.Component {
           reverseDelay={300}
           id={`${props.id}-title`}
         >
-          <div className="titleName">
+          <div className="titleName_main">
             <img className="titleLeft" src={require(`../../assets/images/left.png`)} />
             <label className="title">ABOUT US</label>
             <img className="titleRight" src={require(`../../assets/images/right.png`)} />
