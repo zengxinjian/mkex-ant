@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d2937742-81a6-4707-ae94-5a47d78560df" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Home/Content2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home/Content2.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Home/Content3.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home/Content3.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Home/Content5.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home/Content5.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Home/less/antMotion_style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home/less/antMotion_style.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Home/less/content5.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home/less/content5.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Home/less/custom.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home/less/custom.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Home/less/edit.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home/less/edit.less" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="content5.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="content5.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/Home/less/content5.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+            <state relative-caret-position="187">
+              <caret line="131" column="29" selection-start-line="131" selection-start-column="29" selection-end-line="131" selection-end-column="29" />
               <folding>
                 <element signature="e#64#67#0" />
                 <element signature="e#81#1533#0" />
@@ -39,11 +36,29 @@
       <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/Home/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="214">
+              <caret line="52" column="84" lean-forward="true" selection-start-line="51" selection-end-line="52" selection-end-column="84" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="antMotion_style.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/Home/less/antMotion_style.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.less" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/routes/Home/less/edit.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -111,6 +126,7 @@
       <find>content</find>
       <find>code-box-shape</find>
       <find>QueueAnim</find>
+      <find>2em</find>
     </findStrings>
     <dirStrings>
       <dir>F:\webProject\mkex-ant</dir>
@@ -122,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/routes/Home/less/antMotion_style.less" />
         <option value="$PROJECT_DIR$/node_modules/antd/es/menu/style/index.css" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/routes/Home/less/content.less" />
@@ -139,13 +154,14 @@
         <option value="$PROJECT_DIR$/src/routes/Home/Content1.jsx" />
         <option value="$PROJECT_DIR$/src/routes/Home/Content0.jsx" />
         <option value="$PROJECT_DIR$/src/routes/Home/Content4.jsx" />
-        <option value="$PROJECT_DIR$/src/routes/Home/index.jsx" />
-        <option value="$PROJECT_DIR$/src/routes/Home/less/edit.less" />
         <option value="$PROJECT_DIR$/src/routes/Home/Content2.jsx" />
         <option value="$PROJECT_DIR$/src/routes/Home/Content3.jsx" />
         <option value="$PROJECT_DIR$/src/routes/Home/less/custom.less" />
         <option value="$PROJECT_DIR$/src/routes/Home/Content5.jsx" />
         <option value="$PROJECT_DIR$/src/routes/Home/less/content5.less" />
+        <option value="$PROJECT_DIR$/src/routes/Home/index.jsx" />
+        <option value="$PROJECT_DIR$/src/routes/Home/less/antMotion_style.less" />
+        <option value="$PROJECT_DIR$/src/routes/Home/less/edit.less" />
       </list>
     </option>
   </component>
@@ -266,18 +282,18 @@
       <workItem from="1528885735433" duration="18719000" />
       <workItem from="1528950430252" duration="13276000" />
       <workItem from="1529045038931" duration="216000" />
-      <workItem from="1529056475359" duration="30492000" />
+      <workItem from="1529056475359" duration="32524000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81469000" />
+    <option name="totallyTimeSpent" value="83501000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13277134" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15199035" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -286,7 +302,7 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.38187078" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4464487" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
@@ -428,13 +444,6 @@
     <entry file="file://$PROJECT_DIR$/src/assets/navLogo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Home/less/antMotion_style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="22" lean-forward="true" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -573,13 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Home/less/edit.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="26" selection-start-line="26" selection-end-line="26" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/Home/Content1.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-150">
@@ -622,16 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Home/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/Home/Content5.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
@@ -659,12 +651,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/Home/less/content5.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+        <state relative-caret-position="187">
+          <caret line="131" column="29" selection-start-line="131" selection-start-column="29" selection-end-line="131" selection-end-column="29" />
           <folding>
             <element signature="e#64#67#0" />
             <element signature="e#81#1533#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/Home/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="52" column="84" lean-forward="true" selection-start-line="51" selection-end-line="52" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/Home/less/antMotion_style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/Home/less/edit.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
         </state>
       </provider>
     </entry>
