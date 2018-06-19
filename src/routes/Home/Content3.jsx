@@ -64,10 +64,10 @@ class Content extends React.Component {
           component="h1"
           id={`${props.id}-title`}
           reverseDelay={100}>
-          <div>
-            {/* <img src={require("../../assets/images/left.png")} /> */}
-            <span>FUNCTIONAL INTRODUCTION</span>
-            {/* <img src={require("../../assets/images/right.png")} /> */}
+          <div className="titleName_main">
+            <img className="titleLeft" src={require(`../../assets/images/left.png`)} />
+            <label className="title">FUNCTIONAL INTRODUCTION</label>
+            <img className="titleRight" src={require(`../../assets/images/right.png`)} />
           </div>
         <p>功能介绍</p>
         </TweenOne>

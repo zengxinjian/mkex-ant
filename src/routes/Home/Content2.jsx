@@ -27,10 +27,10 @@ class Content extends React.Component {
           reverseDelay={300}
           id={`${props.id}-title`}
         >
-          <div>
-          <img src={require("../../assets/images/left.png")} />
-          <span>ABOUT US</span>
-          <img src={require("../../assets/images/right.png")} />
+          <div className="titleName_main">
+            <img className="titleLeft" src={require(`../../assets/images/left.png`)} />
+            <label className="title">ABOUT US</label>
+            <img className="titleRight" src={require(`../../assets/images/right.png`)} />
           </div>
           </TweenOne>
         <QueueAnim
