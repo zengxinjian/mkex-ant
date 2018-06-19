@@ -98,7 +98,7 @@ class Content extends React.Component {
             <label className="title">TEAM IMTRODUCTION</label>
             <img className="titleRight" src={require(`../../assets/images/right.png`)} />
           </div>
-          <p style={{fontSize: '22px'}}>团队介绍</p>
+          <p>团队介绍</p>
         </TweenOne>
 
         <BannerAnim prefixCls="banner-user">

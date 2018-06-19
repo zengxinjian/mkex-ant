@@ -53,42 +53,50 @@
     .@{content2} {
       border-bottom:0;
       height: 100% !important;
-      top: -150px;
+      top: -3rem;//-150px
       overflow: hidden;
       width: 90%;
       margin: auto;
       div{
+        .title{
+          font-size: 0.32rem;
+        }
         > h1 {
           position: relative;
           top: auto;
-          margin: 40px auto 20px;
-          font-size: 17pt;
+          margin: 0.8rem auto 0.4rem;//40px auto 20px
+          font-size: 0.32rem;//17pt
         }
       }
       &-contentWrapper {
         top: auto;
-        margin: 20px auto;
+        min-width: 5.76rem;
+        margin: 0.4rem auto;//20px
         height: auto;
         ul {
-
+          li:nth-of-type(odd),li:nth-of-type(even){
+            border-top: 1px solid #2a2580;
+            
+          }
           li:nth-of-type(odd){
-            border-bottom: 1px solid #2a2580;
             border-right: 1px solid #2a2580;
           }
-          li:nth-of-type(even){
-            border-bottom: 1px solid #2a2580;
-          }
-          li:last-child , li:nth-child(5){
-            border-bottom: 0px;
+          li:first-child,li:first-child+li {
+            border-top: 0;
           }
 
           > li {
             width: 50%;
             position: relative;
             margin: auto;
+            img{
+              width: 2rem;
+              height: 2rem;
+            }
+
             p {
-              font-size: 13pt;
-              padding: 30px 0 50px 0;
+              font-size: 0.3rem;//13pt
+              padding: 0.6rem 0.2rem 1rem 0.2rem;//30px 0 50px 0;
             }
             &.queue-anim-leaving {
               position: relative !important;

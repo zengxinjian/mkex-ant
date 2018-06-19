@@ -27,10 +27,10 @@ class Content extends React.Component {
           component="h1"
           id={`${props.id}-title`}
           reverseDelay={100}>
-          <div>
-          <img src={require("../../assets/images/left.png")} />
-            <span>INTEGRAL VALUE</span>
-          <img src={require("../../assets/images/right.png")} />
+          <div className="titleName_main">
+          <img className="titleLeft" src={require("../../assets/images/left.png")} />
+            <label className="title">INTEGRAL VALUE</label>
+          <img className="titleRight" src={require("../../assets/images/right.png")} />
           </div>
         <p>积分价值</p>
         </TweenOne>
