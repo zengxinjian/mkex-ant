@@ -35,9 +35,9 @@ class Footer extends React.Component {
         >
         <img src={require(`../../assets/bottomLogo.png`)} />
         <div className="iconContent">
-          <img src={require(`../../assets/footer_icon1.png`)} />
-          <img src={require(`../../assets/footer_icon2.png`)} />
-          <img src={require(`../../assets/footer_icon3.png`)} />
+          <img src={require(`../../assets/phone/footer_icon1.png`)} />
+          <img src={require(`../../assets/phone/footer_icon2.png`)} />
+          <img src={require(`../../assets/phone/footer_icon3.png`)} />
         </div>
         <div className="copyright">Copyright @ 2017-2018 MKEX.com. All rights reserved</div>
         </TweenOne>

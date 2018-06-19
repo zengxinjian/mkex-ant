@@ -55,6 +55,7 @@ class Content extends React.Component {
           className="leftTextContent"
           id={`${props.id}-wrapper`}
         >
+          <img src={require(`../../assets/phone/main_font.png`)} width='90%'></img>
           <Button type="ghost" key="button" id={`${props.id}-button`}>
             前往交易
           </Button>
