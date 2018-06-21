@@ -101,7 +101,7 @@ class Content extends React.Component {
           <p>团队介绍</p>
         </TweenOne>
 
-        <BannerAnim prefixCls="banner-user">
+        <BannerAnim type="across" prefixCls="banner-user">
           {children}
         </BannerAnim>
         <div className="bannerAnmin" key="sss"></div>
