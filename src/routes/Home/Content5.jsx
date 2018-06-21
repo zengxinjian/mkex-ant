@@ -43,17 +43,17 @@ class Content extends React.Component {
     const isMobile = props.isMobile;
     delete props.isMobile;
     const dataArray = [
-      { img: require('../../assets/images/headportrait.png'), title: "손철원", content: '前 Miss Lee Messenger 代表，与中证一起开创韩国交易所的成员，从1997年开始参与过多款证券Messenger如KYOBO证券、东洋证券、SK证券以及三星 FN Messenger等的开发及服务，在区块链数字资产的投资、及区块链应用的设计与实现方面有资深经验。' },
-      { img: require('../../assets/images/headportrait.png'), title: "손경훈", content: '现任英雄证券经济研究所代表，韩国替代能源产业常务理事，曾接受过Biz1 News等主流媒体的采访，旅行时间（韩旅行社）理事，AR投资咨询前常务，MKEX&M INVESTMENT前常务，区块链早期布道者。' },
-      { img: require('../../assets/images/headportrait.png'), title: "차승훈", content: '具有十多年的网络社区、博客、网站、SNS等线上营销经验，曾参与短期股票投资收入超过100亿韩元而被称为“釜山海狗”，拥有超过一百万的铁杆粉丝，带领粉丝参与过多个百倍币项目的投资。' },
-      { img: require('../../assets/images/headportrait.png'), title: "Michael LEE", content: '毕业于中国科技大学少年班，美国普林斯顿大学物理学博士。2007年至2014年在高盛及瑞士银行工作，先后负责亚太地区结构化衍生产品和全球外汇及期货类量化投资产品。主要专长侧重于期货，外汇，以信用产品的量化策略及交易。从瑞银辞职后专注于程序化交易，主要集中于外汇和期货的投资策略。' },
+      { img: require('../../assets/images/WAP/mkex-wap_29.png'), title: "손철원", content: '前 Miss Lee Messenger 代表，与中证一起开创韩国交易所的成员，从1997年开始参与过多款证券Messenger如KYOBO证券、东洋证券、SK证券以及三星 FN Messenger等的开发及服务，在区块链数字资产的投资、及区块链应用的设计与实现方面有资深经验。' },
+      { img: require('../../assets/images/WAP/mkex-wap_29.png'), title: "손경훈", content: '现任英雄证券经济研究所代表，韩国替代能源产业常务理事，曾接受过Biz1 News等主流媒体的采访，旅行时间（韩旅行社）理事，AR投资咨询前常务，MKEX&M INVESTMENT前常务，区块链早期布道者。' },
+      { img: require('../../assets/images/WAP/mkex-wap_29.png'), title: "차승훈", content: '具有十多年的网络社区、博客、网站、SNS等线上营销经验，曾参与短期股票投资收入超过100亿韩元而被称为“釜山海狗”，拥有超过一百万的铁杆粉丝，带领粉丝参与过多个百倍币项目的投资。' },
+      { img: require('../../assets/images/WAP/mkex-wap_29.png'), title: "Michael LEE", content: '毕业于中国科技大学少年班，美国普林斯顿大学物理学博士。2007年至2014年在高盛及瑞士银行工作，先后负责亚太地区结构化衍生产品和全球外汇及期货类量化投资产品。主要专长侧重于期货，外汇，以信用产品的量化策略及交易。从瑞银辞职后专注于程序化交易，主要集中于外汇和期货的投资策略。' },
     ];
 
     const counselorArray = [
-      { img: require('../../assets/images/headportrait.png'), title: "宝石", content: '深创学院创始人、深圳万国深创区块链投资有限公司董事长，深圳市区块链创投基金发起人，区块链创业大赛《链战》项目发起人，世界区块链大会执行主席，万国区块链博览会秘书长，胡润区块链企业排行榜联合发起人。' },
-      { img: require('../../assets/images/headportrait.png'), title: "정의석", content: '（株） Allive Creative 代表理事/ Football Faentasium 代表，亚洲足球联盟(AFC) Mohamed bin hammam 会长，FIFA会长选举 Personal Identity Director，社团法人 高阳HiFC(挑战K联赛) 发起人和理事，文化体育观光部 Sports ToTo 咨询委员(足球部门)。' },
-      { img: require('../../assets/images/headportrait.png'), title: "Sung Wan", content: '本征区块链研究院院长 世界最大矿场建设者。' },
-      { img: require('../../assets/images/headportrait.png'), title: "易理华", content: '知名区块链投资人，优领资本创始合伙人，INBlockchain（硬币资本）创始合伙人。曾投资量子链、唯链、雷盈、BigONE等30余个区块链项目，涵盖量化基金、区块链母基金、代码审计、交易所等领域，所投项目已创造超过百倍回报率' },
+      { img: require('../../assets/images/WAP/mkex-wap_29.png'), title: "宝石", content: '深创学院创始人、深圳万国深创区块链投资有限公司董事长，深圳市区块链创投基金发起人，区块链创业大赛《链战》项目发起人，世界区块链大会执行主席，万国区块链博览会秘书长，胡润区块链企业排行榜联合发起人。' },
+      { img: require('../../assets/images/WAP/mkex-wap_29.png'), title: "정의석", content: '（株） Allive Creative 代表理事/ Football Faentasium 代表，亚洲足球联盟(AFC) Mohamed bin hammam 会长，FIFA会长选举 Personal Identity Director，社团法人 高阳HiFC(挑战K联赛) 发起人和理事，文化体育观光部 Sports ToTo 咨询委员(足球部门)。' },
+      { img: require('../../assets/images/WAP/mkex-wap_29.png'), title: "Sung Wan", content: '本征区块链研究院院长 世界最大矿场建设者。' },
+      { img: require('../../assets/images/WAP/mkex-wap_29.png'), title: "易理华", content: '知名区块链投资人，优领资本创始合伙人，INBlockchain（硬币资本）创始合伙人。曾投资量子链、唯链、雷盈、BigONE等30余个区块链项目，涵盖量化基金、区块链母基金、代码审计、交易所等领域，所投项目已创造超过百倍回报率' },
     ];
     const childrenToRender = dataArray.map(this.getChildrenToRender);
     const childrenToRender2 = counselorArray.map(this.getChildrenToRender);
