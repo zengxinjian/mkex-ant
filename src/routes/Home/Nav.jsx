@@ -37,7 +37,7 @@ class Header extends React.Component {
           animation={{ x: -30, type: 'from', ease: 'easeOutQuad' }}
           id={`${this.props.id}-logo`}
         >
-          <img width="100%" src={require(`../../assets/navLogo.png`)} />
+          <img width="100%" src={require(`../../assets/images/WAP/mkex-wap_26.png`)} />
         </TweenOne>
         {isMobile ? (<div
           className={`${this.props.className}-phone-nav${this.state.phoneOpen ? ' open' : ''}`}

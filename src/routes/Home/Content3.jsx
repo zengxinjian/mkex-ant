@@ -20,12 +20,12 @@ class Content extends React.Component {
     const oneAnim = { y: '+=30', type: 'from', ease: 'easeOutQuad', opacity: 1 };
     //数据源
     const blockArray = [
-      { img: require('../../assets/images/资产安全.png'), content: '保护资产，安全高效' },
-      { img: require('../../assets/images/融合交易.png'), content: '融合碎片化交易' },
-      { img: require('../../assets/images/孵化院.png'), content: 'LABS孵化&研究院' },
-      { img: require('../../assets/images/数字资产.png'), content: '数字资产管理与托管' },
-      { img: require('../../assets/images/多客户端.png'), content: '多语言与全平台客户端支持' },
-      { img: require('../../assets/images/合伙人.png'), content: '全球合伙人计划' },
+      { img: require('../../assets/images/PC/mkex-pc_03.png'), content: '保护资产，安全高效' },
+      { img: require('../../assets/images/PC/mkex-pc_05.png'), content: '融合碎片化交易' },
+      { img: require('../../assets/images/PC/mkex-pc_07.png'), content: 'LABS孵化&研究院' },
+      { img: require('../../assets/images/PC/mkex-pc_12.png'), content: '数字资产管理与托管' },
+      { img: require('../../assets/images/PC/mkex-pc_13.png'), content: '多语言与全平台客户端支持' },
+      { img: require('../../assets/images/PC/mkex-pc_14.png'), content: '全球合伙人计划' },
     ];
 
     //图片列表

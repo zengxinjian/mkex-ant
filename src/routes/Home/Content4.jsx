@@ -43,7 +43,7 @@ class Content extends React.Component {
           resetStyleBool
         >
           <span id={`${props.id}-img`}>
-            <img width="100%" src={require(`../../assets/phone/integralvalue.png`)} />
+            <img width="100%" src={require(`../../assets/images/WAP/mkex-wap_22.png`)} />
           </span>
         </TweenOne>
 

@@ -33,7 +33,7 @@ class Footer extends React.Component {
           className="bottomContent"
           component="div"
         >
-        <img src={require(`../../assets/bottomLogo.png`)} />
+        <img src={require(`../../assets/images/WAP/mkex-wap_26.png`)} width='50%' />
         <div className="iconContent">
           <img src={require(`../../assets/phone/footer_icon1.png`)} />
           <img src={require(`../../assets/phone/footer_icon2.png`)} />
@@ -52,7 +52,7 @@ class Footer extends React.Component {
           className="bottomContent"
           component="div"
         >
-          <img src={require(`../../assets/bottomLogo.png`)} />
+          <img src={require(`../../assets/images/WAP/mkex-wap_26.png`)} width='15%' height='15%' />
           <div className="iconContent">
             <img src={require(`../../assets/footer_icon1.png`)} />
             <img src={require(`../../assets/footer_icon2.png`)} />
