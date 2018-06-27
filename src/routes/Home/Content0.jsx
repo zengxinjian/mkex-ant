@@ -33,6 +33,7 @@ class Content extends React.Component {
     const BgElement = Element.BgElement;
 
     const mouseOver = () => {
+      1
       this.setState({
         paused: false
       })
