@@ -31,7 +31,7 @@ class Content extends React.Component {
     ];
     const { Element } = BannerAnim;
     const BgElement = Element.BgElement;
-1
+
     const mouseOver = () => {
       this.setState({
         paused: false
